@@ -1,0 +1,107 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CPresenterContactForm
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1034d4ad039488e2
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CPresenterContactForm is class
+      
+      protected
+      	m_clCurrentContact 	is CContactModel	<associated>			// model associated with this presenter: always in phase with the interface
+      	m_clContactSource		is CContactModel	dynamic			// source model (before modification) associated with this presenter
+      	
+      end
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1167792042950428898
+     type_code : 27
+     code : |1-
+      procedure Constructor(pclContact is CContactModel dynamic)
+      
+      // Store the source Contact model
+      m_clContactSource <- pclContact
+      
+      // Perform a copy of the contact for the modifications (will be associated with the interface)
+      m_clCurrentContact <= pclContact
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 1167792042950494434
+     type_code : 28
+     code : |1+
+      procedure Destructor()
+      
+     type : 655360
+   -
+     name : ValidateModification
+     procedure_id : 1167792042950559970
+     type_code : 12
+     code : |1-
+      procedure ValidateModification()
+      
+      // Local variables
+      clError 				is CManageError()
+      clSourceOrigin		is CContactModel
+      
+      // An error occurs if the name is not filled
+      if m_clCurrentContact.p_LastName = "" then
+      ErrorThrow(2,"The name of the control is not specified")
+      	return False
+      end
+      
+      // Stores the source record
+      clSourceOrigin <= m_clContactSource
+      
+      // Retrieve the modifications performed
+      m_clContactSource<=m_clCurrentContact
+      
+      // Save the contact
+      if m_clContactSource.bSave(clError) = False then
+      ErrorThrow(1, clError.FormatMessage())
+      	// Restore the source record as the modification was not performed
+      	m_clContactSource <= clSourceOrigin
+      	return False
+      end
+      
+      // Synchronize the current contact
+      m_clCurrentContact<=m_clContactSource
+      
+      return True
+     type : 458752
+  properties :
+   -
+     name : p_clCurrentContact
+     identifier : 0x1034d4ad039588e2
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         procedure p_clCurrentContact() : CContactModel
+         
+         return m_clCurrentContact
+        type : 1966080
+     template_refs : []
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : CPresentationFicheContact
+resources :
+ string_res :
+  identifier : 0x1fd0a03000390a65
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

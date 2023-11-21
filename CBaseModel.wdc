@@ -1,0 +1,180 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CBaseModel
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1034d4ab035a8354
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CBaseModel is class
+      	
+      	m_bNew		is boolean		// New record?
+      	m_vID			is variant		// Unique identifier of the record
+      	
+      	m_sFileName		is string		// Logical name of the file
+      	m_sNameUniqueKey	is string		// Name of unique key	
+      	
+      end
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1167792034356626260
+     type_code : 27
+     code : |1-
+      procedure Constructor(sFileName is string,sNameAutoID is string)
+      
+      // It is a new record by default
+      m_bNew=True
+      
+      // Store the file and the key
+      m_sFileName		= sFileName
+      m_sNameUniqueKey	= sNameAutoID
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 1167792034356691796
+     type_code : 28
+     code : |1+
+      procedure Destructor()
+      
+     type : 655360
+   -
+     name : Load
+     procedure_id : 1167792034356757332
+     type_code : 12
+     code : |1+
+      procedure Load()
+      
+      // Store the identifier of the current record
+      _StoreIdentifier()
+      
+      // Include the record in memory
+      FileToMemory()
+     type : 458752
+   -
+     name : bSave
+     procedure_id : 1167792034356822868
+     type_code : 12
+     code : |1-
+      procedure bSave(clError is CManageError)
+      
+      // Is it a new record?
+      if bNew() then
+      	// New record
+      HReset(m_sFileName)
+      	MemoryToFile()
+      HAdd(m_sFileName)
+      	if ErrorOccurred() then clError.Init(CManageError::HFSQLError,HErrorInfo())
+      	
+      	// Store the identifier of the current record
+      	_StoreIdentifier()
+      else
+      	// Position on the record in database
+      HReadSeekFirst(m_sFileName,m_sNameUniqueKey,m_vID)
+      	if HFound() then
+      		MemoryToFile()
+      HModify(m_sFileName)
+      		if ErrorOccurred() then clError.Init(CManageError::HFSQLError,HErrorInfo())
+      	else
+      		// Record not found
+      		clError.Init(CManageError::RecordNotFound)
+      	end
+      end
+      
+      // The graphic interface will have to be refreshed
+      RequestRefreshUI()
+      
+      // Return True if no error
+      return clError.p_eCode=CManageError.None
+     type : 458752
+   -
+     name : bDelete
+     procedure_id : 1167792034356888404
+     type_code : 12
+     code : |1-
+      procedure bDelete(clError is CManageError)
+      
+      if bNew() then return True
+      
+      HReadSeekFirst(m_sFileName,m_sNameUniqueKey,m_vID)
+      if HFound() then
+      HDelete(m_sFileName)
+      	if ErrorOccurred() then clError.Init(CManageError::HFSQLError,HErrorInfo())
+      else
+      	clError.Init(CManageError::RecordNotFound)
+      end
+      
+      return clError.p_eCode=CManageError.None
+     type : 458752
+   -
+     name : bNew
+     procedure_id : 1167792034356953940
+     type_code : 12
+     code : |1+
+      procedure bNew()
+      
+      return m_bNew
+     type : 458752
+   -
+     name : Copy
+     procedure_id : 1167792034357019476
+     type_code : 12
+     code : |1-
+      procedure Copy(pclBase is CBaseModel dynamic)
+      
+      object<=pclBase
+     type : 458752
+   -
+     name : FileToMemory
+     internal_properties : CAAAAAgAAAAAviU8ifR9dCucV0WoFRMnAP9WbXw/WtjWCn4BDuosSBhO66vONITH+aE3wk4oqpjgJ9evM8f2Dc7iqhJGBz6v752TlKoq9x6SgssnrsFH2AaccJ1BaDhN5jptLnCHyWq35xDecbPZG1xntJRNV1DwU1P7EqD3kCcuq4qEQe6kcSai0m7DrgrndjNd7lKNE824UwZaG9Du3/9hHv6sgWppqultWvF4QWYnzK0Cq0RiwtGRSvefFHiGQK0w1Fwx4tP0efgXRqs7jPXl6MQzvRijSInB0nEG6ZldaZIvvT2szo8KDef14g==
+     procedure_id : 1167792034357085012
+     type_code : 12
+     code : |1-
+      procedure FileToMemory()
+      
+      FileToMemory(object,m_sFileName)
+     type : 458752
+   -
+     name : MemoryToFile
+     internal_properties : CAAAAAgAAACqUP8qA2bvjpUe0T/GX2mZejH4KwbhbMroHGjDzKzqitoIrfEoDo7Z+6MxNEz6WCpCjj8eLXqWg2RuNmK4gUL7zIBP3GgW1XziAimJTCFJIjpgEB376LrPboLzROoLs8wPD4g+W/uD0ZAr0uqXi15+q3tr3y000WYTwB/fHgOjcrfDiS/MZ496z8QeBVeSHtq9aBm3pEljUhS++92ZzvkygzIow+e1oknQk7gPJPn7dc0V3extZrbEgp8i2loz4M3OU8LdjG35yjenKroptyatcrP7KC9AL18X0wy1O78iQAGE941TTA==
+     procedure_id : 1167792034357150548
+     type_code : 12
+     code : |1-
+      procedure MemoryToFile()
+      
+      MemoryToFile(object,m_sFileName)
+     type : 458752
+   -
+     name : _StoreIdentifier
+     procedure_id : 1167792034357216084
+     type_code : 12
+     code : |1-
+      procedure virtual _StoreIdentifier()
+      
+      // A current record is found therefore it is not a new record
+      m_bNew=False
+      
+      // Store the identifier
+      m_vID={m_sFileName+"."+m_sNameUniqueKey,indItem}
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : CModeleBase
+resources :
+ string_res :
+  identifier : 0x1fd0a03000160a36
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

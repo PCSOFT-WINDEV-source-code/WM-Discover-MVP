@@ -1,0 +1,324 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : WIN_Contact_table
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : WIN_Contact_table
+ identifier : 0x2034d4a909017a3c
+ internal_properties : CAAAAAgAAABaOwJ8TB05GIVxUofzot5ioVcvTjlrKzVgOx/NI+VBBwVbnH3F0SEikOp64jNr7f17C/DJ31vJUtJ68hB9XhaVeE5fWwlnnS2RonBFVOBnDFWJCNNvsbOD7oBJzBKzucoIp9cfsDfW9M2URUrIrvJm+T3tZlrlRUi+5Ccg7FZyR6l0XSxI3LvoJRC9O5yj0c442GhDFxKTSn9bL9/Eumwk0wz8WcSSx0tIdOV72huGEIikosGqMhvOUobKgGzgpJf71Bl0RyBlS+EFVFxB9FUWwIo++vnBhc9YNsSOkvZ9Thr1myVJdR85Y76dX1UKGMit7FHLuuCFB2rxRg6PDHLBj9Y4sUot96CrduwjKgvPCnlG1kPEYZqcOBN05jikmLzsUqYTQl3usnW2H0DA+Ke6PUs+Ls3FbJnafKC6IBcWBVBhKaLkGfuTRft3Fivla3CV8ffWoLmT+vwwnIM7pj1l94E9+0pOhS27KmJuUYgXfQ88xC62N1pIGgZzb+q3/OsQ9yOC0Le4a8cixvKTLmoIJy1njUWcMNA6V8fJdjdBHW8hSgCzDOMC5EqMxsUeklKcw5fR9Z61ecAebUveB3JstZH0bHoHCJq3esi6OwnLjxZV6FJIQaPSyDbawhanD9VcTzremUcggrx6QEKFEI5ChNDu4Qr1tFBOEMIyaXrSxMoy7Lgv3cOff6bcb6gPMBUccHsFixd7wN1lHE9n7rOtgCKJgedYEGc2zWWHm8N32eb6yYMffm7FEin1Nm2dzYkbo8f2AY0amx7wKmeizfI4QLEhlqIBlSyU21IM0d5292rvxUBGqT3BRdiU8PG92hzlrPEcHNeGc0C5QJ0L6C60va+WduTEL8vx+W8ohxaaStz8jdIlu84ZriMAEMnu
+ properties :
+  width : 320
+  height : 504
+  heightMin : 585
+ controls :
+  -
+    name : LOOP_Contact
+    identifier : 0x2034d4a909027a3c
+    internal_properties : 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
+    properties :
+     width : 320
+     height : 504
+    controls :
+     -
+       name : IMG_Profile
+       identifier : 0x2034d4a909077a3c
+       internal_properties : CAAAAAgAAABJMr7K+D5ouUJd/t0MfmSdsqGp94W2yar7YfPps7BCgfdX4FH+vy/2Wkehk93+UhDTaSpaWmOW56FEl2WLq22LHTKnnp/6Wa0QEu1pfodh8jRyYO5Ox0EZUq2iTEEEknFxKyWRKTF0F5wtytY2NS8wsBkQrVYKNOg9J/D3FWVl6fUdIaZ82amKYBZmmvupsp3PFA16JPfuwPwf9lF/zDOT32qdHHDH0WW+MEV1dOUA3dEVosC48Nq7Y95dfFO644dxwP/B0765XYRtR3uRsDAxK3NKEFp9T78iHRkPfvOqkTdY306mHLlsqonI5bfjdaDR8pEBX+phHnLMI6lmtjrI6593QNlxJynk+Xn+6kj0Zkx+mK/FrGb3LJ6ITJwMrfimX1BTmuIV6WTx6lNvue/c48TkUMf3ySvc55qo0vhXydOamLd47XfoX6LSig9FbJJb9Bjds/gGhhdP9EWvnctw8TET821oH9KDmMra2n7HPaaXtX2QxSTm6Tw0evr0By4/h/byiixfJh26VFy34UXnqChEs+SQDikftzSWc5gRFaKRArDlZgckpdUew6cBfTqTrRQIyVD4rXk54L1tiW+XvYU+g9A9DnSoN8iepv44KEbsO9hcVOWx5513IZbUxE1GgHh0xCR01hys8jkuqLdKAaAnAxzf7VCZ3aFC4s6voZa+eNxlFKexXByTnbq8yP3gibKSDMgXX5I162u0BG6vYODOV4FPz8vfQbhk+zK3oDw8b1mirYtPNKMWTHDBdK9lMd5InDub0hFJB1abprFAXNuqpi7jcg2rpqiGdBWGTFqncAr9X9FGrnAhkuw/zP/5wHAN58h650Vwf7Lke32cWin2HPEw+rhv3S2n72C6Scyx3VbyCVhj6cVLmaUx9cBKwzXCJOuXwKOb
+       properties :
+        x : 22
+        y : 18
+        width : 42
+        height : 42
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes : []
+     -
+       name : STC_User
+       identifier : 0x2034d4a909087a3c
+       internal_properties : CAAAAAgAAABWDcr+0sAjLgH38uE50eYqry2EG1c5Y6E6yK1FMlokQGw33L5tadkhUyYE3hmD4dDVxpVhXuhnSJwyg9SnkATROUzv75Hg4b7+xEnRzc2q+339AmcFQFuKPPXrK/CgJgOwJp+G3V/ti5DReR5RVa8XvK/NtCkDXhw/G6kWNAodin7+oxCpbbQ5U1jwEnTnPmIswjZchJADlDWmC7STqZn6NXSbqANmm9ZNbWNjw+m/BU3PZywf0AdJdH/AaI1z3IiEpU5HG1ui5Ej8brMkvIYf8+/crn34+IdJl3O4WLzeP3Y6LHqNuTjrvbOqjpDTsxi1MF9mrwv7afQFxVnVNQBrwe7vnkEAMoDVrrYC2MSgOr1mfiOpEkE3qf3Ue90uFYNpG8Xo1KXOnVbroJKk3NjoRLDwTU9DZslR1nczU34BBLv2BBf7B4wIjhq4I0rADCRzG3PRNTatnizIXy2cWv5qkbgTDZD0vPo+IXXN3TMIPVEtOqOpNdMRWHu6/A7UVPquP5OPgd+Egy9bAU/cRFNkq78=
+       properties :
+        x : 75
+        y : 18
+        width : 224
+        height : 19
+       type : 3
+       code_elements :
+        type_code : 2
+        p_codes : []
+     -
+       name : STC_Email
+       identifier : 0x2034d4a909097a3c
+       internal_properties : CAAAAAgAAAD8Qcv9KqPVvX0TIZXXNTQbzjIiIyz64hPNeEI/62gsg8vtgzH5RKe/i2bPB5mgtQJ++aYBHy1aUjhwWsifOnbjiTXJx4NbOM5bZkWcK2eDsPHLyTLQCT5jRFDS30P9ey1aCdqJLB6QO5EFXx8YxiktLCgCXikbo3ikoXlhUrQljPsg2BhKCJfrGZGcTnRU3xzg0TDURnivhWKI5R7BM3Wx1eWV8aXVg+UNSN8Quur0iu+9VyIc7xx2rG3l09jkYpXRSPeOUA5RwE6Ef7GRgNmhYcd2SV2bgqwe0vO5fg6Ltnfsd2plbeYKx/5sDrAKmO5ozt+GwS1D6tOuumDabuu76gEPTJW0L7czsOedGlCiqSIw7UbvX+Lfamy3Lt03AqaC2ZnkU/k79FaSC2tjo2/3gJIkzEVXOzIpFT6EKkGG3mWNCDApYYHU/KWYUfCBEzCEKpNC8/7NxatKSq0it9XreXoWJqWm2mZ0fJ85/WaX7Q3iWA8Uoi8PHBIpvHi6zo/X+laQWErbFO+PWpxemnBduvtTfwZlYkcR5uPiyzEbRY/CEf77kA==
+       properties :
+        x : 75
+        y : 42
+        width : 224
+        height : 19
+       type : 3
+       code_elements :
+        type_code : 2
+        p_codes : []
+     -
+       name : IMG_Separator
+       identifier : 0x2034d4a9090a7a3c
+       internal_properties : CAAAAAgAAABnHR8srxejfrXvuhBEDqTDu+3SLgstHnpiBQXiMsRW32CyGOcfxs/XYr+xgUwrfsPyTvxSzS5CShcQQryJeHqPKh8Usl2v4AXMdTheIGJnDcAEA/dEhe7OMDZe+C32P8DpDBFybL3IjkCSjid9QJTbogv5ONwmY012/Zv9emQZ16lQparRFRqIpw04ObYH+NGS33iL54SC5y3eDK5avoCnGP2Sv5Dn62LioAEhCQYZaeQi3ziV/LVloX+vSy3VBN7mX4VXuM59vImI6vlkL77Rmn6WrntNj4VjK5XnyCSQ3h1YLLsV0c8Ht7EYyV2TM8YUn2824/oORPPKECxa256nqGPSe0cMLZAm9mljhGL6xCFBH4M9fPNQa0Nfu5gtbHs9paeCSpcW4ozuV0o1GXKVxPWgbFAUabkJTM9HXY1KTZqHIq2CZwWMnzpMbFLxzjTru3I0zkRxrVwzjs5Se87We+nmgJ0fHuvEUvMDkk6xSlvolrfN8xPsg0KUwDr/0VlZcUXrgw5lqzBcG0OgzmzaH/r1Of77WNLDRA4Wnkn4hpbbOGIiX36c+4N7OWDwxL8fkiAUPTFUsYHRQigEsFmHtLGis4T9sWXvYGAoarxQxVzipADi9OG4MGPVQzm6yYX5TF8AW6MK6LEef9/4jiPD9NlN0rUTo/46LfleTnKEr+VW9vG8WkqaHmQeBkUkK4qxx5pT79n1YGCHLiplNEvMliz9dwOMBgH/6Qr/SFqFC5keOAGVkg5ZHNQ5oKp9RXOsTx3Rx10ITPcdmpBEFQsZ3+ukq6+1QaP7b85TAw4Iyw==
+       properties :
+        x : 22
+        y : 69
+        width : 277
+        height : 9
+       type : 8
+       code_elements :
+        type_code : 8
+        p_codes : []
+    columns :
+     -
+       name : ATT_ID
+       identifier : 0x2034d4a909037a3c
+       internal_properties : CAAAAAgAAADt/dn0lWRDaoNmZeqYn+sitWqa17YA8u7LQxhZ3701oh8FTPBUX+9GtHMClpaSBRXBmMiVLJf6oQ56O4/BjQc8DjgYvc6mT67JTzqZ5buyk8GNtq+vg41e369n4Q9+IGgzevrnVlLT3elJwCiepwK41UQeR/h1xHmsuYR6bSHpjLIV/k2OJNlZHS7zKs+AFZyXmZH4VuPjwaEl3pxwNYgoD4BgFw==
+       type : 3
+       content :
+        identifier : 0x2557a2ff026c4fde
+        internal_properties : CAAAAAgAAADryTcE1wdYvD3vRXveAy878MY0tBGVtRJFCKec9ONjoMSjdXko/BUQ7/aa5td4J0QGwbNDZ7u6HVAmFeJiKUW3AIZke7mPEa6O3T80XKwyKxqdz/+IMzq1H7wKTkmLCftmXeih3L2wxA9F34R1rzMUewXfPfNhH+yFL0Z0QK0+gscBykmAbH8+KcjlpZVlWXf1O2O2UpXFTj2e+Oh2XQ==
+        type : 3
+       code_elements :
+        type_code : 46
+        p_codes : []
+     -
+       name : ATT_User
+       identifier : 0x2034d4a909047a3c
+       internal_properties : CAAAAAgAAAAMcEN2j2+GmfHBZoGfO++SWqOtf7tRow0npnK+vXvgJf37ZBsMb49jw/2Cclq7yj1kKxFSTaK5ruNXk0x9lxOcW8RiW7e2K4bTe7eC6PsYTnYeuDaBtNJLev2BDjdkJiyPHB17T3kQk5Qr6aJpZXi1Kc3Y+MfT/QeHlt22ApR/lJy/N3K/rwzXmZZsoLpLM3Ls0VAh3cwpvZUhPjCP1wv1ZPC85DAFVuVBi79KBbe50C6CHuKaXwAD
+       type : 3
+       content :
+        identifier : 0x2557a2ff026e4fde
+        internal_properties : CAAAAAgAAADryTcE1wdYvD3vRXveAy878MY0tBGVtRJFCKec9ONjoMSjdXko/BUQ7/aa5td4J0QGwbNDZ7u6HVAmFeJiKUW3AIZke7mPEa6O3T80XKwyKxqdz/+IMzq1H7wKTkmLCftmXeih3L2wxA9F34R1rzMUewXfPfNhH+yFL0Z0QK0+gscBykmAbH8+KcjlpZVlWXf1O2O2UpXFTj2e+Oh2XQ==
+        type : 3
+       code_elements :
+        type_code : 46
+        p_codes : []
+     -
+       name : ATT_Email
+       identifier : 0x2034d4a909057a3c
+       internal_properties : CAAAAAgAAAB/VSIi3xgVPgWmhf/DUcIhMOQuXkMK/k7QNPCTElXjk09FgsDhzoA5unBvzIrh/J73xbjLj9YZxZRlMCm2cEpMuKVxSkwIFRog/mtjZXxNc6P5rjfLjA04giTGxMy93XhOBIO1z4FSanOFWfHJ8+Qmm9j1CwgSYBX9ozwfKOQ3826qIFkYzhcBNyOjKXzvgYOWhIlIzK125GM2zGtjEv4ZYxiACwqnbbiSDS7xffZXqlLm
+       type : 3
+       content :
+        identifier : 0x2557a2ff02704fde
+        internal_properties : CAAAAAgAAADryTcE1wdYvD3vRXveAy878MY0tBGVtRJFCKec9ONjoMSjdXko/BUQ7/aa5td4J0QGwbNDZ7u6HVAmFeJiKUW3AIZke7mPEa6O3T80XKwyKxqdz/+IMzq1H7wKTkmLCftmXeih3L2wxA9F34R1rzMUewXfPfNhH+yFL0Z0QK0+gscBykmAbH8+KcjlpZVlWXf1O2O2UpXFTj2e+Oh2XQ==
+        type : 3
+       code_elements :
+        type_code : 46
+        p_codes : []
+     -
+       name : ATT_Photo
+       identifier : 0x2034d4a909067a3c
+       internal_properties : CAAAAAgAAADdWCsn+KsR4pPyf9rq22Szi8d9vXiGKoqJUrt0J06ClBKy6ZjTbLfx1Z7CUVCkJ5VJYLDIVpJiAT+WmbM+2oUWi6fiaktxRefQqkL2angp8aqSCr9uQDga3AAI42VrFtyoXAaolC/k87kgNU3RZIJn1DFP8xa1vYm2FW2V+J/bOq3v8pmY+ewHGAUo3XJ4X2QfWwtUvtgLmcyvtKR4erENlWq1tUy4sLaNVfj1fGOes/3Jeg46
+       type : 3
+       content :
+        identifier : 0x2557a2ff02724fde
+        internal_properties : CAAAAAgAAADryTcE1wdYvD3vRXveAy878MY0tBGVtRJFCKec9ONjoMSjdXko/BUQ7/aa5td4J0QGwbNDZ7u6HVAmFeJiKUW3AIZke7mPEa6O3T80XKwyKxqdz/+IMzq1H7wKTkmLCftmXeih3L2wxA9F34R1rzMUewXfPfNhH+yFL0Z0QK0+gscBykmAbH8+KcjlpZVlWXf1O2O2UpXFTj2e+Oh2XQ==
+        type : 3
+       code_elements :
+        type_code : 46
+        p_codes : []
+    type : 30
+    code_elements :
+     type_code : 42
+     p_codes :
+      -
+        code : |1-
+         
+        type : 21
+      -
+        type : 22
+        enabled : false
+      -
+        type : 24
+        enabled : false
+      -
+        type : 23
+        enabled : false
+      -
+        type : 25
+        enabled : false
+      -
+        code : |1+
+         if LOOP_Contact.Count>0 then
+         	// Store the current contact
+         	gclContactTable.p_CurrentContact = LOOP_Contact
+         	
+         	
+         	// Edit
+         	// Local variables
+         	pclContactToModify is CPresenterContactForm dynamic
+         	
+         	if LooperSelect(LOOP_Contact)<=0 then return
+         	
+         	// Read the current contact
+         	pclContactToModify = gclContactTable.AskToModifyContactForm()
+         	
+         	// Check whether there is a current contact
+         	if pclContactToModify = Null then return
+         	
+         	// Open the 'Form' window
+         OpenMobileWindow(WIN_ContactForm,pclContactToModify)
+         	
+         end
+         
+        type : 33
+      -
+        type : 230
+        enabled : false
+      -
+        type : 241
+        enabled : false
+      -
+        type : 222
+        enabled : false
+      -
+        type : 223
+        enabled : false
+      -
+        code : |1+
+         // Deletion
+         nIndex is int = LooperSeek(ATT_ID,LOOP_Contact.ATT_ID)
+         if nIndex <=0 then return
+         
+         // Assign a value to the current element 
+         gclContactTable.p_CurrentContact = gclContactTable.p_arrContacts[nIndex]
+         
+         // Perform the confirmation request in the view
+         if YesNo(No,StringBuild("Do you want to delete %1?",gclContactTable.p_CurrentContact.p_FirstName + " " + gclContactTable.p_CurrentContact.p_LastName)) = No then 
+         	return
+         end
+         
+         // The deletion is effective
+         gclContactTable.DeleteCurrentContact()
+         LOOP_Contact.Delete(nIndex)
+         
+         if ErrorOccurred then Error()
+         
+        type : 224
+  -
+    name : BTN_Add
+    identifier : 0x2034d4a9090b7a3c
+    internal_properties : CAAAAAgAAACIb4iiZB4S69fFqiYrSVmUGu8wVyKqNcuMXEPTKotwnx6bsgDAq5xkBjpFK7tDxotjhxGguq5VyvFA3ibVa+3QiyBgAF1TMb7z50Qrw05p+AAWzNsV6OrpOHAv9Re43pVv3uu5whQXk7HD24mPe5UFAuAYcnILmXE3B3B/KgIN7ZuSzmfAL3D475Pdabki7fZ2BpupLXVa8tfNJ/U44Qvgvf9i7fdXDT/wyNvfm1gbf37IC3DsvkyqDy5ETwNY1ymm07Uc6wQoRERKPwRhY6JEodbHjW0UBMUP5EOWQFfPYF8MOGId6HObDAE0pB6AX4BmLAXouWTg4Axlr+VpB90PbFb/neO81g227d3MvIt3Tq+Z0JF99tdueXxMaxFvMbzBHpRFHFI2xawJ3guHzm7AiwNiNiUmZ88vy5BixmeURm3AGez9jEUY1p7f56K1giahIhnd+bVjrAFhvnm0TB3ZW3LbUaT10Hyil+2nnhxVrQDsEJ+FrticSBrM6ezl+vp+tiWH3WA/xsI+n4YQN6GblT6qb58Tam6biWz9NlxEF0grcyNLouNdGB2aORZ1GVocgr/8l4h3tcHutd4mBugnwpVrSEW3678uPJMMezdF+pWPawHIdd/TO84NluuyfQY3Qhyv3HbdXtmVYsszuBEbljVYx9Cs1C/IsrA7L7JqWEAXIvehuBSgmqH9rHH3Fl8gNPqBQmJQWYjw2p3CU56qspUHr6SXmebbk9UMQB56jSoCsdfPk74CJtu+PgVT5Y50+MLjkmbNDq9cWHo3GZKJsk1bd852MO75Ku27CUtwC8vyDOEGEuQciTW6h/0ncmGaBmXs5VVqqLfn7UkE4LfC/UpurTC7UNRuFHm6WIx+IxEHnXKLd7B59UGexauDeiZH3bq/9/04ggManDUqdsmBhifuKCo6XeKY
+    properties :
+     x : 237
+     y : 419
+     width : 60
+     height : 60
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         // Create a new potential contact
+         gpclTheNewContact = gclContactTable.AskForNewContactForm()
+         
+         // Open the 'Form' window
+         OpenMobileWindow(WIN_ContactForm,gpclTheNewContact, True)
+         
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+ actionbar :
+  name : ACTB_ActionBar
+  identifier : 0x2034d4a9090c7a3c
+  internal_properties : CAAAAAgAAADgN4noOvuNmi8NBAhgLVfUN6N3pAFr5htALTw61MUhShC7ujtmF0PoRynI+V7pPAVp8MBJMjKrFtc6prXkYIVlP25bqgR3cF/Vl09IuHsWrjUXllkKXYLzmtn0ujbsyxWd5RqrZ2+E0wYJ/yl14UA+pSRb8XWuBfNWcHKznT9Xct67J+4Fa3ck6sK1VS6mvXJamV7PshyB2nanEKO0iBWpTF4T+NkcaNio2TiV6K51ZEJ/zarTU07LiBAmdZ24aWypYUd2C0Z2JzHlEaHIx1So1gSrgJMIoEW49gIFfLqpakK0XD/ieeCuiE0Wk0Q/nBnRjTuhOER4rf3r494siQRU5GXcnHF1RwcQQiVebTnB40vt87EN+6Ec2nRkW8UfiVB4zGUGESkqLKI4fP9RyQ0PLQlFnc8CuY9o6WE=
+  controls : []
+  code_elements :
+   type_code : 125
+   p_codes :
+    -
+      type : 229
+      enabled : false
+    -
+      type : 239
+      enabled : false
+    -
+      type : 240
+      enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x29f8144500a4e5ba
+  internal_properties : CAAAAAgAAADgMVTORwj2Mt8z/R5WRL0mTVIMDO11ij5YdBwcO3ZAw8tWdEBL95DgWGGgMGBRKql5dANp5Vg/qpNyJvJQ8sIrr6GzC+masJIwyV5P7DpW0go2kGsf4EvdW1eqlu6V7I5EHVrMjd02cTaXwP0dbd1DSbdsd/Wxk0ScMGI7Z0eDsGOMLRfieoTYskOjcLtA7tgFoR24z+3d3zH3Bloaoqj6XKllvOzqHQUKs5ikiJtsiZpXF9leDIYykRzjnC4k4qQVjthAFpugw+diG+HfnEMv+L/rU3DRjlIiDq+0aeUP
+  options : []
+ languages :
+  - en-GB
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAABKff4sxysR+9kg8GIJ708iDvb5GJxqytSUKL54fomJ9xlu42EWUFv/+en+BSQDmdB2krqVslwL/1eyQDVw8sffQk7lF3aDfZNzV/+zROsnKAy1jaSejRR5UgML
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      procedure MyWindow()
+      
+      gclContactTable is CPresenterContactTable(gclAllTheContacts) <presenter>
+      gpclTheNewContact is CPresenterContactForm dynamic
+   -
+     code : |1+
+      // Display info the first time a test is run via "GO"
+      if InAutomaticTestMode() = False then	
+      Info(<§$0000§>)
+      end
+     type : 34
+   -
+     code : |1+
+      TableDisplay(LOOP_Contact,taCurrentSelection)
+     type : 234
+   -
+     code : |1+
+      if MyChildWindow.ReturnedValue = True then
+      	
+      	// A "new" member was allocated? 
+      	if gpclTheNewContact = Null then
+      		// The contact must be modified in the list of contacts
+      		gclContactTable.ModifyContact()
+      		
+      	else		
+      		// All you have to do is add it
+      		gclContactTable.AddContact(gpclTheNewContact)
+      		
+      		// Frees the element
+      gpclTheNewContact = Null
+      	end
+      end
+      
+      if ErrorOccurred then Error()
+     type : 177
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1-
+      
+     type : 40
+ code_parameters :
+  internal_properties : CAAAAAgAAAB6ragasMBWLfpsSyU19J6lAvYEqFWd1xYOjmHr1XHVZOVmechqLo1vKvfoAJhHeXL59P8BudVQfrBZ/U9vpjDz5RFibMKKm/84EA==
+  original_name : _11
+resources :
+ string_res :
+  identifier : 0x1fd333c801f71b13
+  internal_properties : CAAAAAgAAACyXVFaObH4lOGSEHJoZf1MD49w+XTw2LScZCP/urkWFwy+HYJdyQ3umA==
+  strings :
+   -
+     text :
+      en-GB : "MVP stands for MODEL - VIEW - PRESENTER.\r\n\r\nIt is a \"Design Pattern\" which divides the architecture of user interfaces into layers.\r\nAdopting this layered architecture in the application and the UI makes projects easier to maintain and improve.\r\n\r\nCaution: This development mode uses OOP. It is highly recommended (even mandatory) to master the concepts of OOP.\r\n\r\nLearn more in the online help"
+     index : 0
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

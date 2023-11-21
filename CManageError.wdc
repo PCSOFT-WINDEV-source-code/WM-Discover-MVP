@@ -1,0 +1,124 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CManageError
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1034d4aa034980d3
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      // Type of errors
+      ErrorCode is Enumération
+      	None
+      	RecordNotFound
+      	HFSQLError
+      end
+      
+      CManageError is class	
+      
+      	protected
+      		m_ECode	is ErrorCode		// Error code
+      		m_sText is string		// Text of the error
+      end
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1167792030060609747
+     type_code : 27
+     code : |1-
+      procedure Constructor()
+      
+      // No error by default
+      m_ECode=None
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 1167792030060675283
+     type_code : 28
+     code : |1+
+      procedure Destructor()
+     type : 655360
+   -
+     name : Init
+     procedure_id : 1167792030060740819
+     type_code : 12
+     code : |1-
+      procedure Init(eErrorCode is ErrorCode, sText is string="")
+      
+      // Store the error
+      m_ECode=eErrorCode
+      m_sText=sText
+      
+      // If it is a HFSQL error, add the associated information
+      if eErrorCode=HFSQLError and sText="" then
+      	m_sText=HErrorInfo()
+      end
+     type : 458752
+   -
+     name : FormatMessage
+     procedure_id : 1167792030060806355
+     type_code : 12
+     code : |1-
+      procedure FormatMessage()
+      
+      // Local variables
+      sMessage is string
+      
+      // Management of simple cases
+      if m_ECode=None then return ""
+      if m_sText<>"" then return m_sText
+      
+      // Management of supported codes
+      switch m_ECode
+      	case RecordNotFound: sMessage=<§$0000§>
+      	case HFSQLError: sMessage=<§$0001§>
+      	other case:
+      		// No specific formatting
+      end
+      
+      // Return the message
+      return sMessage
+     type : 458752
+  properties :
+   -
+     name : p_eCode
+     identifier : 0x1034d4aa034a80d3
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         procedure public p_eCode() : ErrorCode
+         
+         // Returns the error code
+         return m_ECode
+        type : 1966080
+     template_refs : []
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : CGestionErreur
+resources :
+ string_res :
+  identifier : 0x143405b9005f7737
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+  strings :
+   -
+     text :
+      en-GB : Record not found in the database
+     index : 0
+   -
+     text :
+      en-GB : Error detected by the database.
+     index : 1
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

@@ -1,0 +1,194 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CContactArrayModel
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1034d4ac0386872c
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CContactArrayModel is class
+      	inherits of CBaseModel
+      	
+      	private
+      		m_arrContacts		is array of CContactModel dynamic		
+      end
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1167792038654543660
+     type_code : 27
+     code : |1+
+      procedure Constructor()
+      	// Call the constructor of the inherited object
+      	Constructor CBaseModel(Contact.Name,Contact.ContactID..Name)
+      
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 1167792038654609196
+     type_code : 28
+     code : |1+
+      procedure Destructor()
+      
+     type : 655360
+   -
+     name : Load
+     procedure_id : 1167792038654674732
+     type_code : 12
+     code : |1-
+      procedure Load()
+      
+      // Local variables
+      
+      // Delete the former content
+      ArrayDeleteAll(m_arrContacts)
+      
+      // Browse the list of contacts
+      for each Contact 
+      	clNewContact is CContactModel
+      	
+      	// Retrieve the items
+      	clNewContact.Load()
+      	
+      	// Add to table
+      	_AddArray(clNewContact)
+      	
+      end
+      
+      // The graphic interface will have to be refreshed
+      RequestRefreshUI()
+     type : 458752
+   -
+     name : AddElement
+     procedure_id : 1167792038654740268
+     type_code : 12
+     code : |1-
+      procedure AddElement(pclNewContact is CContactModel dynamic)
+      
+      // Local variables
+      clErrorManagement is CManageError
+      
+      // Save the contact
+      if pclNewContact.bSave(clErrorManagement) = False then
+      	// The addition failed
+      ErrorThrow(1,clErrorManagement.FormatMessage())
+      	return False
+      end
+      
+      // Add into the array
+      _AddArray(pclNewContact)
+      
+      // The graphic interface will have to be refreshed
+      RequestRefreshUI()
+      return True
+     type : 458752
+   -
+     name : _AddArray
+     procedure_id : 1167792038654805804
+     type_code : 12
+     code : |1-
+      procedure private _AddArray(pclNewContact is CContactModel dynamic)
+      
+      ArrayAdd(m_arrContacts,pclNewContact)
+     type : 458752
+   -
+     name : Modify
+     procedure_id : 1167792038654871340
+     type_code : 12
+     code : |1-
+      procedure Modify(clContactToModify is CContactModel dynamic)
+      
+      // Local variables
+      clErrorManagement 	is CManageError
+      nIndex			is int
+      
+      
+      // Find the contact
+      nIndex = ArraySeek(m_arrContacts,asLinear,"Identifier",clContactToModify.m_vID)
+      if nIndex=-1 then
+      	clErrorManagement.Init(CManageError.RecordNotFound)
+      ErrorThrow(3,clErrorManagement.FormatMessage())
+      	return False
+      end
+      
+      // Save the contact
+      if clContactToModify.bSave(clErrorManagement) = False then
+      	// The modification failed
+      ErrorThrow(2,clErrorManagement.FormatMessage())
+      	return False
+      end
+      
+      // Update in the array
+      m_arrContacts[nIndex] = clContactToModify
+      
+      // The graphic interface will have to be refreshed
+      RequestRefreshUI()
+      return True
+     type : 458752
+   -
+     name : Remove
+     procedure_id : 1167792038654936876
+     type_code : 12
+     code : |1-
+      procedure Remove(pclContactToDelete is CContactModel dynamic)
+      
+      // Local variables
+      clErrorManagement 	is CManageError
+      nIndex			is int
+      
+      // Find the contact
+      nIndex = ArraySeek(m_arrContacts,asLinear,"Identifier",pclContactToDelete.m_vID)
+      if nIndex=-1 then
+      	clErrorManagement.Init(CManageError.RecordNotFound)
+      ErrorThrow(3,clErrorManagement.FormatMessage())
+      	return False
+      end
+      
+      // Delete contact
+      if pclContactToDelete.bDelete(clErrorManagement) = False then
+      	// The deletion failed
+      ErrorThrow(2,clErrorManagement.FormatMessage())
+      	return False
+      end
+      
+      // Delete from the table
+      ArrayDelete(m_arrContacts,nIndex)
+      
+      // The graphic interface will have to be refreshed
+      RequestRefreshUI()
+      return True
+     type : 458752
+  properties :
+   -
+     name : p_arrContacts
+     identifier : 0x1034d4ac0387872c
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         procedure public p_arrContacts()
+         
+         return m_arrContacts
+        type : 1966080
+     template_refs : []
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : CModeleTableauContact
+resources :
+ string_res :
+  identifier : 0x1fd0a030002b0a46
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
